@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>치킨좋아</title>
+	<style>
+		body {width: 1400px; height: 700px; background: black;}
+		#womanImg { width: 500px; margin: auto;}
+		#transBut { width: 200px; margin: auto;}
+	</style>
+</head>
+<body>
+	<img src="woman.jpg" id="womanImg">
+	<img src="chicken.png" id="transBut">
+	<audio id="testMusic">
+		<source src="likeChicken.mp3" type="audio/mpeg">
+	</audio>
+
+	<script type="text/javascript">
+		var toggle = "off";
+
+		womanImg.onclick = function() {
+			if (toggle == "on") {
+				womanImg.setAttribute("src","woman.jpg");
+				document.body.style.background = "black";
+				transBut.setAttribute("src","chicken.png");
+				testMusic.pause();
+			}
+		}
+
+		transBut.onclick = function() {
+			toggle = "on";
+			womanImg.setAttribute("src","piggyDance.gif");
+			document.body.style.backgroundImage = "url('kfc.jpg')";
+			testMusic.play();
+		}
+	</script>
+</body>
+</html>
